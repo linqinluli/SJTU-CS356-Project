@@ -1,1 +1,0 @@
-cmd_/home/linqinluli/OsPrj/module/hello.ko := arm-linux-androideabi-ld -r  -T /home/linqinluli/os/android-kernel/kernel/goldfish/scripts/module-common.lds --build-id  -o /home/linqinluli/OsPrj/module/hello.ko /home/linqinluli/OsPrj/module/hello.o /home/linqinluli/OsPrj/module/hello.mod.o
