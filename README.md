@@ -1,10 +1,9 @@
 # SJTU-CS356-Project
-				README
 ## Files:
 
 ### Problem1_module:
   
-		hello.c			:source file of the module.
+		hello.c				:source file of the module.
     
 		Makefile			:makefile.
     
