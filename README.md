@@ -1,6 +1,6 @@
 # SJTU-CS356-Project
 				README
-##Files:
+## Files:
 
 	###Problem1_module:
   
@@ -8,7 +8,7 @@
     
 		Makefile			:makefile.
     
-###Problem2_print:
+### Problem2_print:
   
 		printptree.c		:source file of ptree print.
     
@@ -16,7 +16,7 @@
     
 		typesctip.txt		:output
     
-	###Problem3_relationship:
+### Problem3_relationship:
   
 		ptreecall.c		:source file of ptreecall.
     
@@ -24,7 +24,7 @@
     
 		typesctip.txt		:output
     
-	###Problem4_BBC:
+### Problem4_BBC:
   
 		BurgerBuddies.c		:source file of BBC.
     
