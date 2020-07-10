@@ -3,9 +3,9 @@
 
 ### Problem1_module:
   
-		hello.c				:source file of the module.
+		hello.c			:source file of the module.
     
-		Makefile			:makefile.
+		Makefile		:makefile.
     
 ### Problem2_print:
   
