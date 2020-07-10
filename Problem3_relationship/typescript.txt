@@ -1,0 +1,68 @@
+Compile:
+linqinluli@ubuntu:~/OsPrj/ptreecall$ cd jni
+linqinluli@ubuntu:~/OsPrj/ptreecall/jni$ ndk-build
+
+Execute: And it's clear that we can see ptree is the child of ptreecall.
+rroot@generic:/ # cd data
+root@generic:/data # ./ptreecall
+518030910022 Parent PID = 498
+518030910022 Child PID = 500
+In child process, ptree:
+init,1,1,0,45,2,0
+	ueventd,45,1,1,0,61,0
+	logd,61,1,1,0,62,1036
+	vold,62,1,1,0,75,0
+	healthd,75,1,1,0,76,0
+	lmkd,76,1,1,0,77,0
+	servicemanager,77,1,1,0,78,1000
+	surfaceflinger,78,1,1,0,80,1000
+	qemud,80,1,1,0,83,0
+	sh,83,1,1,0,84,2000
+	adbd,84,1,1,467,86,0
+		sh,467,1,84,498,0,0
+			ptreecall,498,1,467,500,0,0
+				ptree,500,0,498,0,0,0
+	debuggerd,86,1,1,0,87,0
+	rild,87,1,1,0,88,1001
+	drmserver,88,1,1,0,90,1019
+	installd,90,1,1,0,91,0
+	keystore,91,1,1,0,93,1017
+	gatekeeperd,93,1,1,0,96,1000
+	perfprofd,96,1,1,0,97,0
+	fingerprintd,97,1,1,0,125,1000
+	bootanimation,125,1,1,0,403,1003
+	netd,403,1,1,501,404,0
+		netd,501,0,403,0,0,0
+	mediaserver,404,1,1,0,405,1013
+	main,405,0,1,0,0,0
+kthreadd,2,1,0,3,0,0
+	ksoftirqd/0,3,1,2,0,4,0
+	kworker/0:0,4,1,2,0,5,0
+	kworker/u:0,5,1,2,0,6,0
+	khelper,6,1,2,0,7,0
+	sync_supers,7,1,2,0,8,0
+	bdi-default,8,1,2,0,9,0
+	kblockd,9,1,2,0,10,0
+	rpciod,10,1,2,0,11,0
+	kworker/0:1,11,1,2,0,12,0
+	kswapd0,12,1,2,0,13,0
+	fsnotify_mark,13,1,2,0,14,0
+	crypto,14,1,2,0,25,0
+	kworker/u:1,25,1,2,0,30,0
+	mtdblock0,30,1,2,0,35,0
+	mtdblock1,35,1,2,0,40,0
+	mtdblock2,40,1,2,0,41,0
+	binder,41,1,2,0,42,0
+	deferwq,42,1,2,0,43,0
+	kworker/u:2,43,1,2,0,44,0
+	mmcqd/0,44,1,2,0,47,0
+	jbd2/mtdblock0-,47,1,2,0,48,0
+	ext4-dio-unwrit,48,1,2,0,51,0
+	flush-31:1,51,1,2,0,53,0
+	jbd2/mtdblock1-,53,1,2,0,54,0
+	ext4-dio-unwrit,54,1,2,0,57,0
+	flush-31:2,57,1,2,0,59,0
+	jbd2/mtdblock2-,59,1,2,0,60,0
+	ext4-dio-unwrit,60,1,2,0,68,0
+	kauditd,68,1,2,0,144,0
+	kworker/0:2,144,1,2,0,0,0

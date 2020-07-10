@@ -1,0 +1,190 @@
+Compile:
+linqinluli@ubuntu:~$ cd OsPrj
+linqinluli@ubuntu:~/OsPrj$ cd bbp
+linqinluli@ubuntu:~/OsPrj/bbp$ cd jni
+linqinluli@ubuntu:~/OsPrj/bbp/jni$ ndk-build
+[armeabi] Compile thumb  : BBC <= BurgerBuddies.c
+[armeabi] Executable     : BBC
+[armeabi] Install        : BBC => libs/armeabi/BBC
+
+Execute:
+linqinluli@ubuntu:~/OsPrj/bbp/jni$ adb push /home/linqinluli/OsPrj/bbp/libs/armeabi/BBC /data
+54 KB/s (13592 bytes in 0.242s)
+linqinluli@ubuntu:~/OsPrj/bbp/jni$ adb shell
+root@generic:/ # cd data
+
+Wrong input check:
+root@generic:/data # ./BBC 2 3 3
+Please check you input!
+The correct format should be:
+./BBC #Cooksnum #Cashiersnum #Customersnum #RackSizenum
+
+Normal execution:
+root@generic:/data # ./BBC 2 4 41 10
+Cooks [2], Cashiers [4], Customers [41]
+Begin run.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Customer [5] comes.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] accepts an order.
+Cashier [4] takes a burger to customer.
+Customer [34] comes.
+Cashier [3] accepts an order.
+Cashier [3] takes a burger to customer.
+Customer [23] comes.
+Customer [31] comes.
+Cashier [2] accepts an order.
+Cashier [2] takes a burger to customer.
+Customer [36] comes.
+Cashier [1] accepts an order.
+Cashier [1] takes a burger to customer.
+Cashier [4] accepts an order.
+Customer [38] comes.
+Cashier [3] accepts an order.
+Customer [10] comes.
+Cashier [2] accepts an order.
+Customer [25] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [37] comes.
+Cashier [4] accepts an order.
+Customer [7] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [15] comes.
+Cashier [2] accepts an order.
+Customer [18] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [19] comes.
+Cashier [4] accepts an order.
+Customer [27] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [28] comes.
+Cashier [2] accepts an order.
+Customer [39] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [6] comes.
+Cashier [4] accepts an order.
+Customer [12] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [26] comes.
+Cashier [2] accepts an order.
+Customer [29] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [30] comes.
+Cashier [4] accepts an order.
+Customer [33] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [8] comes.
+Cashier [2] accepts an order.
+Customer [9] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [11] comes.
+Cashier [4] accepts an order.
+Customer [14] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Customer [17] comes.
+Cashier [2] accepts an order.
+Cashier [1] takes a burger to customer.
+Customer [22] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [35] comes.
+Cashier [4] accepts an order.
+Customer [16] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [20] comes.
+Cashier [2] accepts an order.
+Customer [21] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [24] comes.
+Cashier [4] accepts an order.
+Customer [32] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [40] comes.
+Cashier [2] accepts an order.
+Customer [41] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [13] comes.
+Cashier [4] accepts an order.
+Customer [4] comes.
+Cashier [3] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Customer [3] comes.
+Cashier [2] accepts an order.
+Customer [2] comes.
+Cashier [1] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.
+Cashier [3] takes a burger to customer.
+Customer [1] comes.
+Cashier [4] accepts an order.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [2] takes a burger to customer.
+Cashier [1] takes a burger to customer.
+Cook [2] makes a burger.
+Cook [1] makes a burger.
+Cashier [4] takes a burger to customer.

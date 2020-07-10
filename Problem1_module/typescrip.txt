@@ -1,0 +1,16 @@
+Compile: The module place need to be changed in you own system. (KID)
+
+linqinluli@ubuntu:~$ cd OsPrj
+linqinluli@ubuntu:~/OsPrj$ cd module
+linqinluli@ubuntu:~/OsPrj/module$ make
+make -C /home/linqinluli/os/android-kernel/kernel/goldfish ARCH=arm CROSS_COMPILE=arm-linux-androideabi- M=/home/linqinluli/OsPrj/module modules
+make[1]: Entering directory '/home/linqinluli/os/android-kernel/kernel/goldfish'
+  Building modules, stage 2.
+  MODPOST 1 modules
+make[1]: Leaving directory '/home/linqinluli/os/android-kernel/kernel/goldfish'
+
+install module:
+root@generic:/data/misc # insmod hello.ko
+root@generic:/data/misc # lsmod
+Module                  Size  Used by
+hello                   1324  0 

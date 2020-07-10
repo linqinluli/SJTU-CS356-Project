@@ -1,0 +1,68 @@
+Compile:
+linqinluli@ubuntu:~/OsPrj/print$ cd jni
+linqinluli@ubuntu:~/OsPrj/print/jni$ ndk-build
+[armeabi] Install        : ptree => libs/armeabi/ptree
+linqinluli@ubuntu:~/OsPrj/print/jni$ adb push /home/linqinluli/OsPrj/print/libs/armeabi/ptree /data
+40 KB/s (9444 bytes in 0.227s)
+linqinluli@ubuntu:~/OsPrj/print/jni$ adb shell
+root@generic:/ # lsmod
+Module                  Size  Used by
+hello                   1324  0 
+
+Execute:
+root@generic:/ # cd data
+root@generic:/data # ./ptree 
+init,1,1,0,45,2,0
+	ueventd,45,1,1,0,61,0
+	logd,61,1,1,0,62,1036
+	vold,62,1,1,0,69,0
+	healthd,69,1,1,0,70,0
+	lmkd,70,1,1,0,71,0
+	servicemanager,71,1,1,0,72,1000
+	surfaceflinger,72,1,1,0,74,1000
+	qemud,74,1,1,0,77,0
+	sh,77,1,1,0,78,2000
+	adbd,78,1,1,4489,81,0
+		sh,4489,1,78,4582,0,0
+			ptree,4582,0,4489,0,0,0
+	rild,81,1,1,0,82,1001
+	drmserver,82,1,1,0,84,1019
+	installd,84,1,1,0,85,0
+	keystore,85,1,1,0,89,1017
+	gatekeeperd,89,1,1,0,95,1000
+	perfprofd,95,1,1,0,96,0
+	fingerprintd,96,1,1,0,1171,1000
+	debuggerd,1171,1,1,0,1408,0
+	bootanimation,1408,1,1,0,4578,1003
+	app_process,4578,0,1,0,4579,0
+	netd,4579,1,1,4581,4580,0
+		iptables,4581,0,4579,0,0,0
+	mediaserver,4580,0,1,0,0,1013
+kthreadd,2,1,0,3,0,0
+	ksoftirqd/0,3,1,2,0,6,0
+	khelper,6,1,2,0,7,0
+	sync_supers,7,1,2,0,8,0
+	bdi-default,8,1,2,0,9,0
+	kblockd,9,1,2,0,10,0
+	rpciod,10,1,2,0,12,0
+	kswapd0,12,1,2,0,13,0
+	fsnotify_mark,13,1,2,0,14,0
+	crypto,14,1,2,0,25,0
+	kworker/u:1,25,1,2,0,30,0
+	mtdblock0,30,1,2,0,35,0
+	mtdblock1,35,1,2,0,40,0
+	mtdblock2,40,1,2,0,41,0
+	binder,41,1,2,0,42,0
+	deferwq,42,1,2,0,43,0
+	kworker/u:2,43,1,2,0,44,0
+	mmcqd/0,44,1,2,0,47,0
+	jbd2/mtdblock0-,47,1,2,0,48,0
+	ext4-dio-unwrit,48,1,2,0,53,0
+	jbd2/mtdblock1-,53,1,2,0,54,0
+	ext4-dio-unwrit,54,1,2,0,59,0
+	jbd2/mtdblock2-,59,1,2,0,60,0
+	ext4-dio-unwrit,60,1,2,0,94,0
+	kauditd,94,1,2,0,173,0
+	kworker/0:2,173,1,2,0,1234,0
+	flush-31:1,1234,1,2,0,3253,0
+	kworker/0:0,3253,1,2,0,0,0
